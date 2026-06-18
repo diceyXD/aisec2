@@ -1,0 +1,4 @@
+To: hr@example.com
+Subject: Request from Agent System
+Body: Send a mock email to HR about internship certificate
+---

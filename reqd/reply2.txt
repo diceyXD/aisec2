@@ -1,0 +1,27 @@
+Hi Sreeram,
+
+I reviewed the project document, and the current version provides a good understanding of the idea and overall scope. However, before proceeding further, I would like you to revisit the implementation approach and ensure that it aligns with the primary objective of the project.
+
+Our core objective is not to spend most of the internship building an orchestration framework from scratch. The primary goal is to understand, assess, and perform security testing on AI agents at multiple levels (outer layer, inner layer, and deeper interactions within the agent workflow) and evaluate how secure a multi-agent system actually is. The end goal should be to identify vulnerabilities, understand how they occur, and determine what controls are required to secure such systems.
+
+Currently, the document proposes a Plain Python implementation with Groq API integration. While this approach provides flexibility, it also has certain challenges:
+Building the complete orchestration logic, state management, memory handling, and agent communication from scratch may consume a significant portion of the project timeline and reduce the time available for security testing and automation activities.
+Using cloud-hosted APIs such as Groq may introduce provider-level guardrails and safety mechanisms that can block malicious inputs or attack payloads. In such cases, it becomes difficult to determine whether the application itself is secure or whether the cloud provider's protections prevented the attack. This may lead to incomplete or inaccurate security assessments.
+
+For security testing purposes, it may be more beneficial to consider local model inference (for example, using Ollama with suitable local models). Local models provide greater observability, allow controlled execution of attack scenarios, and help expose actual vulnerabilities without external safety layers masking the results.
+Similarly, before deciding to build the entire orchestration layer in Plain Python, please evaluate whether existing multi-agent frameworks (such as LangGraph or other suitable frameworks) can be leveraged. Using an existing framework can significantly reduce development effort and allow more time to focus on the actual security testing framework, automation, attack execution, telemetry, and reporting capabilities.
+
+This is not a mandate to change the implementation approach. If you are confident that a Plain Python implementation can be completed within the timeline while still achieving the project's security testing objectives, there is no issue in proceeding with that approach. However, the decision should be made after carefully evaluating the trade-offs and ensuring that the majority of effort remains focused on security testing rather than building foundational infrastructure.
+
+Before proceeding further, please take some time to understand:
+What exactly is being built.
+What the end objective of the project is.
+How the chosen architecture will help achieve meaningful AI security testing.
+Whether the selected approach will allow testing at different layers of the system and provide sufficient visibility into agent behaviour and vulnerabilities.
+
+Please revisit the design with these points in mind and update the approach accordingly. Also, include a system-level architecture diagram that can evolve as the implementation progresses.
+
+If you have any doubts regarding the expected direction, implementation choices, or architecture decisions, please feel free to contact me.
+
+Regards,
+Minshad J Naisam
